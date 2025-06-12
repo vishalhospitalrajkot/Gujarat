@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarat: A Comprehensive Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Translate API Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // Original page language
+                includedLanguages: 'en,hi,gu', // English, Hindi, Gujarati
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false // Prevent automatic display of the toolbar
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Chosen Palette: Warm Neutrals with Saffron Accent -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 400px; max-height: 50vh; }
+        @media (max-width: 768px) { .chart-container { height: 350px; max-height: 60vh; } }
+        .map-area { cursor: default; transition: opacity 0.2s ease-in-out; }
+        .map-area:hover { opacity: 0.8; }
+        .modal-bg {
+            display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%;
+            overflow: auto; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+            align-items: center; justify-content: center;
+        }
+        .modal-content {
+            margin: auto; padding: 2rem; border-radius: 0.5rem; width: 90%; max-width: 600px;
+            max-height: 90vh; overflow-y: auto;
+        }
+        .active-tab { background-color: #F97316; color: white; }
+        .inactive-tab { background-color: #E5E7EB; color: #374151; }
+
+        /* Styles to make Google Translate blend better */
+        #google_translate_element {
+            margin-left: auto; /* Push to the right */
+            position: absolute;
+            top: 1rem; /* Adjust as needed for vertical alignment */
+            right: 1rem; /* Adjust as needed for horizontal alignment */
+            z-index: 100; /* Ensure it's above other content */
+        }
+        #google_translate_element .goog-te-gadget-simple {
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            background-color: #fff;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1.25rem;
+        }
+        #google_translate_element .goog-te-gadget-simple a {
+            color: #374151 !important; /* text-gray-700 */
+        }
+        #google_translate_element .goog-te-gadget-simple .goog-te-menu-value {
+            color: #374151;
+        }
+        #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span {
+            color: #374151;
+        }
+        /* Hide the Google Translate banner at the top */
+        .goog-te-banner-box {
+            display: none !important;
+        }
+        body {
+            top: 0 !important; /* Reset body top margin introduced by Google Translate */
+        }
+    </style>
+</head>
+<body class="bg-orange-50 text-gray-800">
+
+    <div id="google_translate_element"></div>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section class="text-center py-12 md:py-20">
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900">
+                <span class="block">Gujarat</span>
+                <span class="block text-orange-600">India's Western Powerhouse</span>
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-600">
+                A vibrant state on India’s western coast, known for its rich history, diverse culture, booming economy, and spectacular landscapes.
+            </p>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Key Insights into Gujarat</h3>
+                <p class="mt-2 text-lg text-gray-600">Discover the overarching facts that define Gujarat, from its significant economic role to its unique cultural and natural features.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Gujarat is a state on India's western coast, known for its **long coastline** and **rich history**.</li>
+                    <li>It has a **diverse culture**, with famous festivals like Navratri and Uttarayan, and is home to the Asiatic lion.</li>
+                    <li>The economy is strong, with industries like petrochemicals and agriculture, and tourism is a growing sector.</li>
+                    <li>Key cities include Ahmedabad (largest) and Gandhinagar (capital), with attractions like Rani ki Vav and Gir Forest.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Geography & Demographics</h3>
+                <p class="mt-2 text-lg text-gray-600">A detailed look at Gujarat's location, diverse landscapes, its administrative centers, and key population figures.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-sm font-medium text-gray-500">Population (approx.)</p>
+                    <p class="mt-1 text-3xl font-semibold text-orange-600">~60 M</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-sm font-medium text-gray-500">Area</p>
+                    <p class="mt-1 text-3xl font-semibold text-orange-600">196,000 km²</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <p class="text-sm font-medium text-gray-500">Coastline Length</p>
+                    <p class="mt-1 text-3xl font-semibold text-orange-600">~1,600 km</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-4 md:p-6">
+                <h4 class="text-xl font-bold text-center mb-4">Location & Climate</h4>
+                <div class="relative w-full max-w-4xl mx-auto mb-6">
+                    <svg viewBox="0 0 1000 800" class="w-full h-auto">
+                        <defs>
+                            <path id="kutch" d="M211 25l-26 21 -10 26 -28 9 -23 4 -12 17 -11 20 8 38 1 20 22 17 38 13 40 5 40 1 54 13 43 19 32 4 -5 -40 8 -23 20 -24 37 -13 22 -7 -13 25 -32 24 -11 39 3 22 18 -10 39 -22 23 -37 12 -42 12 -19 -15 -35 -24 -24 -46 -15 -25 -25 -20z"/>
+                            <path id="banaskantha" d="M439 23l24 38 12 37 13 26 -1 22 -29 25 -21 7 -22 -18 -39 3 -22 24 -37 12 -23 -22 10 -39 -18 -22 -3 47 -23 49 -27z"/>
+                            <path id="patan" d="M371 180l-22 -23 39 -3 22 -24 37 -12 23 22 21 -7 29 -25 -20 27 -25 31 -35 24z"/>
+                            <path id="mehsana" d="M441 181l-25 -31 20 -27 1 -22 -13 -26 31 -11 32 15 15 32 10 25 -10 31 -37 13z"/>
+                            <path id="sabarkantha" d="M485 106l-31 11 -12 -37 -24 -38 29 -9 34 19 30 38z"/>
+                            <path id="aravalli" d="M519 144l-34 -19 -29 9 2 40 37 16 29 -8 13 -29z"/>
+
+                            <path id="gandhinagar" d="M486 212l10 -31 -37 -13 -10 25 12 19z"/>
+                            <path id="ahmedabad" d="M441 292l-23 -29 -3 -49 35 -24 10 -25 37 13 10 31 -12 19 13 36 21 21 -15 32 -33 13z"/>
+                            <path id="surendranagar" d="M304 290l4 -40 8 -23 20 -24 37 -13 22 7 13 25 3 -49 23 29 -33 13 -15 32 -43 27z"/>
+      
+                            <path id="morbi" d="M266 226l-32 -24 -13 25 22 7 -12 39 37 13 43 -27 15 -32 -43 -27z"/>
+                            <path id="rajkot" d="M289 369l-19 -42 2 -40 43 27 -15 32 -33 13 -21 -21 -13 -36z"/>
+                            <path id="jamnagar" d="M192 342l22 -7 12 -39 37 -13 15 32 2 40 -20 29 -45 9z"/>
+                            <path id="devbhoomi" d="M132 355l-20 -44 -12 -30 22 -12 38 13 45 -9 20 -29 -2 22 -30 40z"/>
+                            <path id="porbandar" d="M174 411l-2 -22 30 -40 2 22 20 29 -45 9 -5 -2z"/>
+                            <path id="junagadh" d="M224 430l-20 -29 -2 -22 19 42 -2 -22 45 -9 3 32 -22 30z"/>
+                            <path id="gir" d="M251 462l-22 -30 -3 -32 45 -9 3 32 22 30 -22 35 -45 -9z"/>
+                            <path id="amreli" d="M308 428l-22 -30 -3 -32 45 -9 -3 32 -22 30 45 9 3 32 -22 30z"/>
+                            <path id="bhavnagar" d="M380 425l-22-30 45-9 -3-32 22-30 -45-9 3-32 22-30 43-27 -43 27 22 30 3 32 -22 30 -3 32z"/>
+                            <path id="botad" d="M351 350l-43 -27 21 21 33 -13 15 -32 22 30 -43 27 -2 1z"/>
+
+                            <path id="anand" d="M485 324l-33 -13 -15 32 40 18 20 -15z"/>
+                            <path id="kheda" d="M464 292l-21 -21 15 -32 33 13 20 15 -40 18z"/>
+                            <path id="panchmahal" d="M547 296l-37 -16 -29 8 -13 29 25 28 30 5 20 -21z"/>
+                            <path id="dahod" d="M580 327l-30 -5 -25 -28 35 15 33 15z"/>
+                            <path id="mahisagar" d="M542 259l-37 -16 -2 40 37 16 29 -8 13 -29 -35 -15 -5 -3z"/>
+                            <path id="chhota" d="M572 358l-33-15 -35 15 1 22 25 35 48 -10z"/>
+                            <path id="vadodara" d="M505 342l-20 15 -40 -18 1 -22 25 -35 -1 -22 25 35 48 -10 -25 35 1-22z"/>
+                            <path id="bharuch" d="M495 441l-25 -35 -1 22 -48 10 1 22 25 35 48-10z"/>
+                            <path id="narmada" d="M540 431l-48 10 -1 -22 25 -35 48 10 -25 35 1-22z"/>
+                            <path id="tapi" d="M589 480l-25 -35 -48 10 1 22 25 35 48 -10 -25 35z"/>
+                            <path id="surat" d="M532 505l-25-35 -48 10 1 22 25 35 48 -10 -25 35z"/>
+                            <path id="navsari" d="M555 545l-25 -35 -48 10 1 22 25 35 48 -10 -25 35z"/>
+                            <path id="dang" d="M595 528l-25 -35 -48 10 1 22 25 35 48 -10 -25 35z"/>
+                            <path id="valsad" d="M570 585l-25 -35 -48 10 1 22 25 35 48 -10 -25 35z"/>
+                        </defs>
+                        <g id="district-paths" class="stroke-gray-400 stroke-1">
+                             <use href="#kutch" class="map-area fill-orange-100"></use>
+                            <use href="#banaskantha" class="map-area fill-orange-200"></use>
+                            <use href="#patan" class="map-area fill-orange-100"></use>
+                            <use href="#mehsana" class="map-area fill-orange-200"></use>
+                            <use href="#sabarkantha" class="map-area fill-orange-100"></use>
+                            <use href="#gandhinagar" class="map-area fill-orange-300"></use>
+                            <use href="#aravalli" class="map-area fill-orange-200"></use>
+                            <use href="#ahmedabad" class="map-area fill-orange-300"></use>
+                            <use href="#surendranagar" class="map-area fill-orange-100"></use>
+                            <use href="#morbi" class="map-area fill-orange-200"></use>
+                            <use href="#rajkot" class="map-area fill-orange-200"></use>
+                            <use href="#jamnagar" class="map-area fill-orange-100"></use>
+                            <use href="#devbhoomi" class="map-area fill-orange-200"></use>
+                            <use href="#porbandar" class="map-area fill-orange-100"></use>
+                            <use href="#junagadh" class="map-area fill-orange-200"></use>
+                            <use href="#gir" class="map-area fill-orange-100"></use>
+                            <use href="#amreli" class="map-area fill-orange-200"></use>
+                            <use href="#bhavnagar" class="map-area fill-orange-100"></use>
+                            <use href="#botad" class="map-area fill-orange-300"></use>
+                            <use href="#anand" class="map-area fill-orange-100"></use>
+                            <use href="#kheda" class="map-area fill-orange-200"></use>
+                            <use href="#panchmahal" class="map-area fill-orange-100"></use>
+                            <use href="#mahisagar" class="map-area fill-orange-300"></use>
+                            <use href="#dahod" class="map-area fill-orange-200"></use>
+                            <use href="#chhota" class="map-area fill-orange-100"></use>
+                            <use href="#vadodara" class="map-area fill-orange-300"></use>
+                            <use href="#bharuch" class="map-area fill-orange-200"></use>
+                            <use href="#narmada" class="map-area fill-orange-100"></use>
+                            <use href="#tapi" class="map-area fill-orange-300"></use>
+                            <use href="#surat" class="map-area fill-orange-200"></use>
+                            <use href="#navsari" class="map-area fill-orange-100"></use>
+                            <use href="#dang" class="map-area fill-orange-200"></use>
+                            <use href="#valsad" class="map-area fill-orange-100"></use>
+                        </g>
+                    </svg>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-700">Gujarat is located on India's western coast, bordered by the Arabian Sea to the south and west, Rajasthan to the north, Madhya Pradesh to the east, and Maharashtra to the southeast. It boasts the longest coastline in India, approximately 1,600 km, making it a key maritime region.</p>
+                    <p class="mt-2 text-gray-700">Its capital is **Gandhinagar**, and the largest city is **Ahmedabad**. The state features diverse terrain including deserts, forests, wetlands, and its climate varies from 15°C-35°C in winters to 25°C-45°C in summers.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+                    <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#127777;</span> Climate & Ecosystems</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><span class="font-semibold">Climate:</span> Varies with regions; winters (November to February) range from 15°C to 35°C, summers (March to May) from 25°C to 45°C. Monsoons (June to October) bring moderate rainfall.</li>
+                        <li><span class="font-semibold">Ecosystems:</span> Diverse, including deserts, scrublands, deciduous forests, wetlands, mangroves, coral reefs, and estuaries.</li>
+                        <li><span class="font-semibold">Biodiversity:</span> Home to unique marine species and significant wildlife sanctuaries like Gir Forest National Park (Asiatic lion) and Wild Ass Sanctuary.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Economy & Industry</h3>
+                <p class="mt-2 text-lg text-gray-600">Gujarat is a major commercial hub, with a robust economy (GSDP about **US$259 billion in FY2021–22**). It's a leader in diverse industries, with world-class infrastructure supporting its significant trade and export activities.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-2 bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center">
+                    <h4 class="text-xl font-bold text-center mb-4">Economic Sector Contributions (GSDP Share)</h4>
+                    <div class="chart-container h-64 md:h-80">
+                         <canvas id="gsvaChart"></canvas>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-xl font-bold mb-4">Key Industries Explorer</h4>
+                    <p class="text-gray-600 mb-4">Click on an industry below to see its significant contributions to Gujarat's robust economy.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                         <button class="industry-tab inactive-tab px-4 py-2 rounded-md font-medium text-sm transition" data-industry="petrochemicals">Petrochemicals</button>
+                        <button class="industry-tab inactive-tab px-4 py-2 rounded-md font-medium text-sm transition" data-industry="pharma">Pharmaceuticals</button>
+                        <button class="industry-tab inactive-tab px-4 py-2 rounded-md font-medium text-sm transition" data-industry="textiles">Textiles</button>
+                        <button class="industry-tab inactive-tab px-4 py-2 rounded-md font-medium text-sm transition" data-industry="diamonds">Diamonds</button>
+                        <button class="industry-tab inactive-tab px-4 py-2 rounded-md font-medium text-sm transition" data-industry="dairy">Dairy</button>
+                        <button class="industry-tab inactive-tab px-4 py-2 rounded-md font-medium text-sm transition" data-industry="engineering">Engineering</button>
+                    </div>
+                    <div id="industry-details" class="bg-orange-50 p-6 rounded-lg min-h-[250px] transition-all duration-300">
+                        <h5 id="industry-title" class="text-lg font-bold text-orange-700">Select an Industry</h5>
+                        <p id="industry-text" class="mt-2 text-gray-700">Details about the selected industry will appear here.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-4 md:p-6 mt-8">
+                <h4 class="text-xl font-bold text-center mb-4">Gujarat's Comparative Economic Contributions to India</h4>
+                <p class="text-center text-gray-600 mb-4">Visualizing Gujarat's significant share in key national economic sectors.</p>
+                <div class="chart-container">
+                    <canvas id="comparativeEconomicChart"></canvas>
+                </div>
+            </div>
+             <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+                <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#128645;</span> Infrastructure Supporting Growth</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><span class="font-semibold">Ports & Exports:</span> Gujarat’s coastline and ports fuel trade. **Mundra (Adani)** is India’s largest commercial port (handling ~155 million tonnes, ~11% of the country’s cargo), and nearby **Kandla (Deendayal)** is a major port too. The state contributes over **one-fifth of India’s merchandise exports**.</li>
+                    <li><span class="font-semibold">Highways & Rail:</span> Rapidly expanding highway and rail networks support extensive trade and commerce.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Vibrant Culture & Rich History</h3>
+                <p class="mt-2 text-lg text-gray-600">Gujarat has a rich historical background, with ancient sites dating back to the Indus Valley Civilization. It is culturally diverse, known for its vibrant traditions, folk arts, and unique vegetarian cuisine.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#128220;</span> Historical Highlights</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><span class="font-semibold">Ancient:</span> **Harappan (Indus Valley) sites** like Dholavira and Lothal attest to a 3rd-millennium BCE civilization in coastal Gujarat. By the 3rd century BCE, Gujarat was part of the Mauryan Empire (Ashoka’s rock edicts on Girnar confirm this).</li>
+                    <li><span class="font-semibold">Classical/Medieval:</span> After the Mauryas, local dynasties (e.g. the Maitrakas of Valabhi, 5th–8th century) flourished. The **Solanki (Chaulukya) dynasty** (11th–13th c.) built famed temples (e.g. Modhera Sun Temple, Somnath). In 1299 AD Ala-ud-din Khalji (Delhi Sultanate) conquered the region; by 1411 Ahmedabad was founded when Sultan Ahmed Shah established the independent Gujarat Sultanate.</li>
+                    <li><span class="font-semibold">Mughal–British:</span> The Mughals absorbed Gujarat in the 16th century. The Marathas held it in the 18th century. After 1818, it became part of British India (Bombay Presidency).</li>
+                    <li><span class="font-semibold">Modern:</span> Upon India’s independence (1947), Gujarat was initially within Bombay State. On **May 1, 1960**, Bombay State was split on linguistic lines, and the modern state of Gujarat was formed.</li>
+                    <li><span class="font-semibold">Birthplace of Mahatma Gandhi:</span> The state is the birthplace of **Mahatma Gandhi’s activism (Porbandar)**, playing a pivotal role in the Indian independence movement.</li>
+                </ul>
+            </div>
+            
+            <h4 class="text-2xl font-bold mb-6 text-center">Folk Arts & Traditional Dress</h4>
+             <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400/F97316/FFFFFF?text=Textiles+Crafts" alt="Textiles and Crafts" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Textiles & Crafts</h5>
+                        <p class="text-gray-600 text-sm mt-1">Famous for rich textiles and crafts including **Patola silk and Bandhani tie-dye**, and **mirror-embroidered Kutchi textiles**.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400/FB923C/FFFFFF?text=Folk+Music" alt="Folk Music" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Folk Music</h5>
+                        <p class="text-gray-600 text-sm mt-1">A thriving tradition including devotional **Sugam Sangeet, bhajans, and bardic songs**.</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400/FDBA74/FFFFFF?text=Traditional+Dress" alt="Traditional Dress" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Traditional Dress</h5>
+                        <p class="text-gray-600 text-sm mt-1">Colorful attire: women wear embroidered **chaniya-cholis** (ankle-length skirts with a blouse and dupatta) and silver jewelry (in Kutch, the heavy **Pachchikam** ensemble); men wear the **kediyu** (embroidered tunic) and **dhoti or churidar**.</p>
+                    </div>
+                </div>
+            </div>
+             <div class="bg-white rounded-lg shadow-lg p-6 mt-8 max-w-2xl mx-auto">
+                <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#127866;</span> Unique Feature: Alcohol Prohibition</h4>
+                <p class="text-gray-600">Gujarat is notable for **prohibiting alcohol**, a policy shared with a few other Indian states. This reflects its unique social policies and cultural values.</p>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Travel & Top Tourist Attractions</h3>
+                <p class="mt-2 text-lg text-gray-600">Gujarat offers spectacular landscapes and iconic landmarks, making tourism a rapidly growing sector. Explore its natural wonders, spiritual sites, and engineering marvels. Winter (Nov–Feb) is generally the best time for touring.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/4ADE80/FFFFFF?text=Gir+National+Park" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Gir National Park">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Gir National Park</h4>
+                        <p class="mt-2 text-gray-600">India’s only home of the **Asiatic lion 🦁**, sheltering around 600 lions. Safari drives through dry deciduous forest are the main attraction. Best time to visit: March (easier spotting) or Nov–Feb (pleasant weather).</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/34D399/FFFFFF?text=Rann+of+Kutch" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Rann of Kutch">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Rann of Kutch</h4>
+                        <p class="mt-2 text-gray-600">The Great Rann of Kutch is a vast white salt desert. Most spectacular in winter (Oct–Feb) when the white salt flats gleam under moonlight and the **Rann Utsav** festival is held. Daytime temperatures ~12–25°C.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/6EE7B7/FFFFFF?text=Somnath+Temple" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Somnath Temple">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Somnath Temple (Prabhas Patan)</h4>
+                        <p class="mt-2 text-gray-600">A historic Shiva temple, one of the 12 **Jyotirlinga** shrines, reconstructed many times. Ideal visiting period: Oct–March (cool, 10–24°C), with Maha Shivratri (in Feb) drawing pilgrims.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/A7F3D0/FFFFFF?text=Dwarka+Temple" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Dwarka Temple">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Dwarka (Dwarkadhish Temple)</h4>
+                        <p class="mt-2 text-gray-600">Famed for Lord Krishna's Dwarkadhish Temple. Legend says the current temple (with its 43m spire and 52-yard flag) was built by Krishna’s grandson 2,500+ years ago. Cooler months (Oct–Feb, 9–34°C) are best.</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/22C55E/FFFFFF?text=Statue+of+Unity" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Statue of Unity">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Statue of Unity (Kevadia)</h4>
+                        <p class="mt-2 text-gray-600">Near Kevadia, stands the 182m Statue of Unity, the world’s tallest statue, honoring Sardar Vallabhbhai Patel. Inaugurated in 2018, it’s a major attraction with nightly light shows and a museum. Visit year-round; winter months are most comfortable.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/16A34A/FFFFFF?text=Saputara" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Saputara Hill Station">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Saputara Hill Station</h4>
+                        <p class="mt-2 text-gray-600">The only hill station in Gujarat, nestled in the Western Ghats, offering cool climes and scenic views.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/059669/FFFFFF?text=Rani+ki+Vav" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Rani ki Vav">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold">Rani ki Vav (Patan)</h4>
+                        <p class="mt-2 text-gray-600">A UNESCO World Heritage Site, this 11th-century stepwell is one of the finest, adorned with intricate carvings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Current Events & Developments (as of mid-2025)</h3>
+                <p class="mt-2 text-lg text-gray-600">Gujarat is consistently driving forward with ambitious projects and policies across various sectors, reflecting its commitment to growth and prosperity.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+                <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#128187;</span> Economic & Infrastructure Push</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><span class="font-semibold">Record Budget & Infrastructure Push:</span> In Feb 2025 Gujarat presented its largest-ever budget (~**₹3.70 lakh crore**). It included a **₹50,000 Cr “Viksit Gujarat Fund”** for growth. The government plans major connectivity projects: two new greenfield expressways (the Deesa–Pipavav **Namo Shakti Expressway** and the Somnath–Ahmedabad–Dwarka **Somnath-Dwarka Expressway**), 12 high-speed corridors (total ~1,367 km), and 150 new roads to link tourist hubs.</li>
+                    <li><span class="font-semibold">Airport Expansions:</span> A new greenfield airport at Dahod (**₹210 crore**) was announced, along with expansions of the Porbandar, Bhavnagar, Surat and Vadodara airports. These aim to boost tourism and industrial access.</li>
+                    <li><span class="font-semibold">Blue Economy:</span> The budget announced a **₹1,622 Cr “blue economy” package** to boost the fisheries sector (Gujarat has India’s longest coastline).</li>
+                    <li><span class="font-semibold">Investment Attraction:</span> The state continues to attract large investments (e.g. in auto, pharma and IT parks) and maintains India’s first IFSC (**GIFT City in Gandhinagar**) to grow the finance sector.</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-4 mt-6 flex items-center"><span class="text-2xl mr-2">&#127881;</span> Tourism Initiatives</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Under the central **SASCI scheme**, the GoI sanctioned **₹99.5 Cr for an eco-tourism project at Porbandar (Mokarsagar)** and **₹51.6 Cr for a luxury tented city & convention centre at Dhordo (White Rann)**.</li>
+                    <li>The state also plans the development of the **Ambaji pilgrimage corridor** and **Dharoi tourism site** to attract visitors.</li>
+                    <li>Gujarat’s **2025–26 budget allocates ₹6,500 Cr** directly to tourism infrastructure (roads, attractions, etc.), reflecting an aggressive push to make Gujarat a top travel destination.</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-4 mt-6 flex items-center"><span class="text-2xl mr-2">&#128100;</span> Other Developments</h4>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><span class="font-semibold">Welfare Schemes:</span> Welfare schemes for tribal communities, women’s empowerment programs, and urban development projects were also highlighted in recent news.</li>
+                    <li><span class="font-semibold">Educational Achievements:</span> Four students from Ahmedabad ranked in the top 100 of the JEE Advanced exam, highlighting educational excellence.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Cuisine & Major Festivals</h3>
+                <p class="mt-2 text-lg text-gray-600">Gujarat’s vibrant culture is best experienced through its delectable vegetarian cuisine and lively festival calendar, which blends devotion, dance, and communal feasting.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#127858;</span> Delectable Gujarati Cuisine</h4>
+                    <p class="text-gray-600">Gujarat is famous for its **vegetarian cuisine**, often served in a **thali** (platter) style. Gujarati cooks characteristically blend sweet, salty and spicy flavors.
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li><span class="font-semibold">Typical Thali:</span> Includes rice, chapatis, dal (lentils), a seasonal vegetable curry, **farsan** (crispy fried snacks like dhokla or fafda), yogurt or chaas (buttermilk), pickles, and a sweet dish.</li>
+                        <li><span class="font-semibold">Popular Dishes:</span> **Dhokla** (steamed fermented chickpea-flour cake), **Thepla** (thin spiced flatbread with fenugreek), **Khandvi** (rolled gram-flour snack), **Undhiyu** (mixed-vegetable winter stew), and snacks like **fafda** (spicy fried strips). Street-food scenes in cities like Ahmedabad are legendary.</li>
+                        <li><span class="font-semibold">Desserts:</span> Uniquely, every Gujarati meal traditionally ends with a dessert (for example **jalebi, shrikhand, or mohanthal**). During festivals or special occasions, other treats like **handvo** (savory lentil cake) or sweet porridges are also prepared.</li>
+                    </ul>
+                    </p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h4 class="text-xl font-bold mb-4 flex items-center"><span class="text-2xl mr-2">&#127881;</span> Major Festivals</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><span class="font-semibold">Navratri (Sept/Oct):</span> The state’s biggest festival, spanning nine nights of music and dance. Communities gather for nightly **Garba** (now UNESCO-listed) and **Dandiya** dances (often in huge open grounds) to worship the goddess Durga. Everyone dresses in colorful embroidered clothes, and competitions draw massive crowds. Navratri culminates on **Vijayadashami**, with processions and worship.</li>
+                        <li><span class="font-semibold">Uttarayan (Makar Sankranti, Jan 14):</span> Known as the kite festival, Uttarayan is celebrated statewide on January 14. The sky fills with kites of every color as people shout “Kai Po Che!” It marks the winter solstice and is a joyous social festival. Traditional foods like **fafda with jalebi** and sesame-jaggery sweets are enjoyed.</li>
+                        <li><span class="font-semibold">Diwali (Oct/Nov):</span> The “Festival of Lights” is celebrated with lamps and fireworks. Houses are decorated with diyas and colorful rangoli. Families perform Laxmi Puja in the evening and exchange sweets and gifts. In Gujarat, Diwali is also followed by **Annakut** (mountain of food) offerings in temples.</li>
+                        <li><span class="font-semibold">Other Festivals:</span> Includes Hindu holidays like Holi and Janmashtami (especially in Dwarka), as well as Muslim (Eid) and Jain festivals (Paryushan), reflecting Gujarat’s pluralistic society. Overall, Gujarat’s festivals blend devotion, dance, and communal feasting, making it a year-round celebration of culture.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Essential Travel Tips</h3>
+                <p class="mt-2 text-lg text-gray-600">Make your visit to Gujarat enjoyable and smooth with these practical travel guidelines and local etiquette notes.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><span class="font-semibold">Best Time to Visit:</span> October–March for cool, dry weather; full-moon nights in February–March for the Rann Utsav are especially magical. March is also good for Gir NP. Summers (Apr–June) bring extreme heat, so plan attractions accordingly.</li>
+                    <li><span class="font-semibold">Getting Around:</span> Well-connected by rail and road (Western Railways, major stations like Ahmedabad Junction, Surat, Vadodara, and Rajkot). Domestic flights link major cities to Delhi, Mumbai, and Bengaluru. Airports in Ahmedabad, Vadodara, Jamnagar, Porbandar, Surat, Rajkot, Bhavnagar, and Bhuj.</li>
+                    <li><span class="font-semibold">Local Etiquette:</span> When visiting temples, dress modestly and remove shoes. Gujaratis are warm hosts—feel free to exchange a “Kem Cho?” (How’re you?).</li>
+                    <li><span class="font-semibold">Safety:</span> Gujarat is noted for its safety, being one of India's safest states with low crime rates.</li>
+                    <li><span class="font-semibold">Language:</span> Official language **Gujarati** (an Indo-Aryan tongue) is spoken by the majority, with dialects like Kachchhi and Kathiyawadi. Urdu, Sindhi, and Hindi are also used.</li>
+                    <li><span class="font-semibold">Currency & Time:</span> Indian Rupees (INR); Time zone is GMT +5:30.</li>
+                    <li><span class="font-semibold">General Tips:</span> Always carry sun protection and water, and book safaris or events in advance during peak season. Keep passport copy in a hotel safe, use well-lit ATMs, obtain travel insurance.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact-info" class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Contact Information</h3>
+                <p class="mt-2 text-lg text-gray-600">Key contacts for various services and establishments.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4 text-orange-700">Vishal Hospital (Rajkot)</h4>
+                    <p class="text-gray-700"><span class="font-semibold">Address:</span> Vishal Hospital, Kailashwadi Main Road, opposite Taluka Polish Choki, Junction Plot, Rajkot, Gujarat 360001</p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Mobile Number:</span> <a href="tel:9228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Landline Number:</span> <a href="tel:02812450408" class="text-blue-600 hover:underline">0281-2450408</a></p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/" target="_blank" class="text-blue-600 hover:underline">https://vishalhospitalrajkot.github.io/</a></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4 text-orange-700">Vishal Banquet Hall (Bihar)</h4>
+                    <p class="text-gray-700"><span class="font-semibold">Address:</span> Vishal Banquet Hall, Gaya-Dobhi Rd, Musatpura, Bihar 823004</p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Mobile Number:</span> <a href="tel:9228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Website:</span> <a href="https://vishalbanquethall1.github.io/" target="_blank" class="text-blue-600 hover:underline">https://vishalbanquethall1.github.io/</a></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4 text-orange-700">Vishal Hospital (Bodhgaya, Bihar)</h4>
+                    <p class="text-gray-700"><span class="font-semibold">Address:</span> Vishal Hospital, Gaya-Dobhi Rd, Musatpura, Bihar 823004</p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Mobile Number:</span> <a href="tel:9228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/vishalhospitalbodhgaya/" target="_blank" class="text-blue-600 hover:underline">https://vishalhospitalrajkot.github.io/vishalhospitalbodhgaya/</a></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4 text-orange-700">Dr. Anoop Lal Sinha</h4>
+                    <p class="text-gray-700"><span class="font-semibold">Mobile Number:</span> <a href="tel:9228105245" class="text-blue-600 hover:underline">9228105245</a></p>
+                    <p class="text-gray-700 mt-2"><span class="font-semibold">Website:</span> <a href="https://vishalhospitalrajkot.github.io/Dr.AnoopLalSinha/" target="_blank" class="text-blue-600 hover:underline">https://vishalhospitalrajkot.github.io/Dr.AnoopLalSinha/</a></p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="bg-gray-800">
+        <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p>Interactive Profile of Gujarat | Generated from Comprehensive Analysis</p>
+            <p>&copy; 2024. All data derived from the provided source report.</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal-bg">
+        <div class="modal-content bg-white relative">
+             <button id="modal-close" class="absolute top-2 right-4 text-gray-500 hover:text-gray-900 text-3xl font-bold">&times;</button>
+            <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+            <p id="modal-desc" class="text-gray-700"></p>
+        </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Map interactivity (simplified as no specific district data is provided in the new source)
+    document.querySelectorAll('.map-area').forEach(area => {
+        area.addEventListener('mousemove', function(e) {
+            // Tooltip functionality removed as specific district data (pop, area) is not in new source
+            // Simple visual hover effect is handled by CSS .map-area:hover
+        });
+        area.addEventListener('mouseleave', function() {
+            // Tooltip functionality removed
+        });
+    });
+
+    const gsvaCtx = document.getElementById('gsvaChart').getContext('2d');
+    const gsvaChart = new Chart(gsvaCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Secondary (Manufacturing)', 'Tertiary (Services)', 'Primary (Agriculture)'],
+            // Retaining previous GSDP sector shares as the new source doesn't provide them with the same categories
+            data: [45.29, 35.63, 19.08], 
+            backgroundColor: [
+                'rgba(249, 115, 22, 0.9)',
+                'rgba(59, 130, 246, 0.9)',
+                'rgba(34, 197, 94, 0.9)'
+            ],
+            borderColor: [
+                'rgba(249, 115, 22, 1)',
+                'rgba(59, 130, 246, 1)',
+                'rgba(34, 197, 94, 1)'
+            ],
+            borderWidth: 1
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' },
+                tooltip: {
+                     callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            if (label) { label += ': '; }
+                            if (context.parsed !== null) { label += context.parsed + '%'; }
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    const industryData = {
+        petrochemicals: { title: "Petrochemicals", text: "Gujarat houses the largest petrochemical complex in the country (Jamnagar complex, Reliance refinery is the world’s largest oil refining site). It produces ~62% of India’s petrochemicals and ~35% of its chemicals, and supplies ~66% of India’s soda ash and 91% of its salt." },
+        pharma: { title: "Pharmaceuticals", text: "Gujarat is a major hub for the pharmaceutical sector, contributing significantly to India's drug production and research facilities." },
+        textiles: { title: "Textiles", text: "Gujarat is a leading textile producer, with Ahmedabad often called the 'Manchester of India.' The state grows ~37% of India’s cotton crop and hosts many spinning/weaving mills. Over 40% of India’s weaving machinery is made here." },
+        diamonds: { title: "Diamonds", text: "Surat, Gujarat is the world’s diamond polishing hub. The state accounts for ~80% of India’s cut-and-polished diamond exports." },
+        dairy: { title: "Dairy", text: "A significant agricultural sector, driven by cooperatives like Amul. Gujarat is a leading producer of milk, with milk production rising to 18.31 million tonnes in 2023-24 (7.65% national share). The state’s focus on animal husbandry leads to daily payments of Rs 200 crore to 3.6 million milk producers." },
+        engineering: { title: "Engineering", text: "A growing and vital industry, contributing to diversified manufacturing capabilities, including machinery, automotive components, and various engineering goods." }
+    };
+
+    const industryTabs = document.querySelectorAll('.industry-tab');
+    const industryTitle = document.getElementById('industry-title');
+    const industryText = document.getElementById('industry-text');
+    
+    industryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const industry = tab.dataset.industry;
+            const data = industryData[industry];
+            
+            industryTabs.forEach(t => {
+                t.classList.remove('active-tab');
+                t.classList.add('inactive-tab');
+            });
+
+            tab.classList.add('active-tab');
+            tab.classList.remove('inactive-tab');
+
+            industryTitle.textContent = data.title;
+            industryText.textContent = data.text;
+        });
+    });
+    industryTabs[0].click(); // Activate the first tab by default
+
+    // Comparative Economic Contributions Chart (retained as new source has similar info)
+    const comparativeEconomicCtx = document.getElementById('comparativeEconomicChart').getContext('2d');
+    const comparativeEconomicChart = new Chart(comparativeEconomicCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Exports', 'Milk Production', 'Diamond Polishing', 'Cotton Production'],
+            datasets: [
+                {
+                    label: "Gujarat's Share (%)",
+                    // Data from the provided source: Exports (over one-fifth of India's merchandise exports implies >20%, previous was 30-33%, using 25% as representative), Milk (7.65%), Diamond (80%), Cotton (37%)
+                    data: [25, 7.65, 80, 37], 
+                    backgroundColor: 'rgba(234, 88, 12, 0.8)',
+                    borderColor: 'rgba(234, 88, 12, 1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true, title: { display: true, text: 'Percentage Share (%)' } } },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) { label += ': '; }
+                            if (context.parsed.y !== null) { label += context.parsed.y + '%'; }
+                            return label;
+                        }
+                    }
+                },
+                legend: { position: 'top' }
+            }
+        }
+    });
+
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const closeModal = document.getElementById('modal-close');
+    
+    const closeModalHandler = () => { modal.style.display = 'none'; }
+    closeModal.addEventListener('click', closeModalHandler);
+    modal.addEventListener('click', (e) => { if (e.target === modal) { closeModalHandler(); } });
+});
+</script>
+</body>
+</html>
