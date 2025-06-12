@@ -446,6 +446,16 @@
             </div>
         </section>
 
+        <section id="quiz-section" class="py-12">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">Test Your Knowledge: Gujarat Quiz!</h3>
+                <p class="mt-2 text-lg text-gray-600">Challenge yourself with these questions about Gujarat's history, culture, and economy.</p>
+            </div>
+            <div id="quiz-container" class="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+                <!-- Quiz will be rendered here by JavaScript -->
+            </div>
+        </section>
+
         <section id="contact-info" class="py-12">
             <div class="text-center mb-12">
                 <h3 class="text-3xl font-bold text-gray-900">Contact Information</h3>
@@ -624,6 +634,390 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModalHandler = () => { modal.style.display = 'none'; }
     closeModal.addEventListener('click', closeModalHandler);
     modal.addEventListener('click', (e) => { if (e.target === modal) { closeModalHandler(); } });
+
+
+    // QUIZ JAVASCRIPT LOGIC
+    const quizData = {
+      "questions": [
+        {
+          "question": "According to the provided analysis, what is the primary reason for the recent significant revision of Gujarat's coastline length to 2,340.62 km?",
+          "answerOptions": [
+            {
+              "text": "The physical geography of the coastline changed due to recent seismic activity.",
+              "rationale": "The document explicitly states the revision was not due to a physical change in geography, but rather a change in how it was measured.",
+              "isCorrect": false
+            },
+            {
+              "text": "A new, more precise measurement methodology was adopted, including offshore islands.",
+              "rationale": "The analysis highlights that a finer measurement scale and the inclusion of offshore islands connected at low tide were key to the revised figure.",
+              "isCorrect": true
+            },
+            {
+              "text": "Land reclamation projects for new ports artificially extended the coastline.",
+              "rationale": "While Gujarat has extensive port development, the text attributes the change in length to measurement methodology, not land reclamation.",
+              "isCorrect": false
+            },
+            {
+              "text": "The previous figure of 1,600 km was a historical estimate that was never officially surveyed.",
+              "rationale": "The text indicates that the previous measurements were official but used a much smaller scale, leading to a less precise figure.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "Consider how advancements in surveying technology might affect how we measure complex natural features."
+        },
+        {
+          "question": "Which historical event led to the formation of the modern state of Gujarat on May 1, 1960?",
+          "answerOptions": [
+            {
+              "text": "The state was created immediately following India's independence in 1947.",
+              "rationale": "The document states that after independence, Gujarat was initially part of the larger Bombay State, not formed immediately.",
+              "isCorrect": false
+            },
+            {
+              "text": "The establishment of the Gujarat Sultanate by Zafar Khan in 1407.",
+              "rationale": "This event established an independent Sultanate in the region, but the modern state's formation occurred much later in the 20th century.",
+              "isCorrect": false
+            },
+            {
+              "text": "The bifurcation of Bombay State based on linguistic lines.",
+              "rationale": "The report specifies that the modern state was formed by splitting Bombay State to create separate states for Gujarati and Marathi speakers.",
+              "isCorrect": true
+            },
+            {
+              "text": "The integration of princely states like Kachchh and Saurashtra into India.",
+              "rationale": "The integration of these princely states in 1956 enlarged Bombay State, but the formation of Gujarat as a separate entity happened later.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "Think about the major administrative reorganizations that took place in post-independence India."
+        },
+        {
+          "question": "The analysis highlights a paradox in Gujarat's demographic and economic profile. What is this paradox?",
+          "answerOptions": [
+            {
+              "text": "A high population growth rate despite a low birth rate.",
+              "rationale": "The document attributes the high population growth to factors like interstate migration, not a contradiction with birth rates.",
+              "isCorrect": false
+            },
+            {
+              "text": "A very low unemployment rate coexisting with significant challenges in higher education and skill development.",
+              "rationale": "This reflects the core issue discussed: a booming economy with low unemployment that may rely on migrant labor due to a local skills gap.",
+              "isCorrect": true
+            },
+            {
+              "text": "A large agricultural workforce despite the state being the most industrialized in India.",
+              "rationale": "While this is a feature of the economy, the key paradox discussed is the relationship between employment and education.",
+              "isCorrect": false
+            },
+            {
+          "text": "High per capita income but a low overall Gross State Domestic Product (GSDP).",
+              "rationale": "The text states that Gujarat has a high GSDP and a per capita income significantly higher than the national average, so this is not a paradox.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "Consider the relationship between the available jobs in a fast-growing economy and the qualifications of the local population."
+        },
+        {
+          "question": "Which industry is Gujarat globally dominant in, processing approximately 80% of the world's supply?",
+          "answerOptions": [
+            {
+              "text": "Automotive manufacturing",
+              "rationale": "While a major hub, Gujarat's contribution to India's transport equipment sourcing is around 9%, not a global dominance of 80%.",
+              "isCorrect": false
+            },
+            {
+              "text": "Denim production",
+              "rationale": "The state is a global leader in denim, ranking third in the world, but this does not represent an 80% market share.",
+              "isCorrect": false
+            },
+            {
+              "text": "Diamond cutting and polishing",
+              "rationale": "The document explicitly states that Gujarat is a global leader in this industry, processing the vast majority of the world's diamonds.",
+              "isCorrect": true
+            },
+            {
+              "text": "Pharmaceuticals and medical devices",
+              "rationale": "Gujarat is a leader in India for this sector, but the 80% figure is specifically associated with a different industry.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "This industry is centered in the city of Surat and deals with precious stones."
+        },
+        {
+          "question": "What is the cultural significance of 'Garba,' a traditional dance form of Gujarat?",
+          "answerOptions": [
+            {
+              "text": "It is a harvest dance performed by farmers to celebrate a good crop.",
+              "rationale": "Garba is a devotional dance, not primarily a harvest celebration, though festivals can have multiple layers of meaning.",
+              "isCorrect": false
+            },
+            {
+              "text": "It is a theatrical dance depicting the life of Lord Krishna.",
+              "rationale": "While reenactments of Krishna's life are part of Janmashtami, Garba is specifically dedicated to a different deity.",
+              "isCorrect": false
+            },
+            {
+              "text": "It is a vigorous martial art dance performed by men of the Siddi community.",
+              "rationale": "This describes Siddi Dhamal, another distinct and fascinating dance form found in Gujarat, but not Garba.",
+              "isCorrect": false
+            },
+            {
+              "text": "It is a devotional circular dance performed during Navratri to honor Goddess Amba.",
+              "rationale": "The text identifies Garba with the Navratri festival and its worship of the goddess, highlighting its performance around an earthen pot.",
+              "isCorrect": true
+            }
+          ],
+          "hint": "This dance is central to the nine-night festival, which is the state's biggest cultural celebration."
+        },
+        {
+          "question": "The Modhera Sun Temple and the Somnath Temple are iconic architectural achievements from which powerful medieval dynasty in Gujarat?",
+          "answerOptions": [
+            {
+              "text": "The Mauryan Dynasty",
+              "rationale": "The Mauryan Empire's presence is confirmed by Ashoka's edicts, but they belong to an earlier, ancient period of history.",
+              "isCorrect": false
+            },
+            {
+              "text": "The Gupta Empire",
+              "rationale": "The Guptas controlled Gujarat in the late 4th to 5th centuries, predating the construction of these specific medieval temples.",
+              "isCorrect": false
+            },
+            {
+              "text": "The Gujarat Sultanate",
+              "rationale": "The Gujarat Sultanate was known for founding Ahmedabad and developing Indo-Saracenic architecture, which came after the period these temples were built.",
+              "isCorrect": false
+            },
+            {
+              "text": "The Solanki (Chaulukya) Dynasty",
+              "rationale": "The report explicitly credits the Solanki dynasty (11th–13th c.) with building these famed temples during a period of great cultural progress.",
+              "isCorrect": true
+            }
+          ],
+          "hint": "This dynasty's rule, from the 10th to 13th centuries, is considered a golden age for Gujarat's art and architecture."
+        },
+        {
+          "question": "Which of the following best describes the agricultural trend in Gujarat, as noted in the analysis?",
+          "answerOptions": [
+            {
+              "text": "A shift away from agriculture towards complete industrialization, leading to a decline in crop production.",
+              "rationale": "The report indicates impressive agricultural growth and a trend towards high-value crops, not a decline.",
+              "isCorrect": false
+            },
+            {
+              "text": "A focus on traditional, water-intensive food grains due to the success of the Narmada Project.",
+              "rationale": "The text notes a discernible trend towards cash crops, fruits, and vegetables, not just traditional food grains.",
+              "isCorrect": false
+            },
+            {
+              "text": "Impressive growth and a shift towards cash crops, supported by water harvesting and hi-tech agriculture.",
+              "rationale": "This accurately summarizes the report's findings on agriculture: growth despite water challenges, driven by innovation and a move to higher-value crops.",
+              "isCorrect": true
+            },
+            {
+              "text": "Stagnation in the agricultural sector, which employs a majority of the workforce but contributes little to GSDP.",
+              "rationale": "The analysis highlights a high growth rate in agriculture (11.1% from 2001-2017), which contradicts the idea of stagnation.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "Think about how a state with diverse agro-climatic zones and water challenges might optimize its farming sector."
+        },
+        {
+          "question": "Gir National Park, a major tourist and conservation site in Gujarat, is globally significant for being the last natural habitat for which species?",
+          "answerOptions": [
+            {
+              "text": "The Indian Wild Ass",
+              "rationale": "The Indian Wild Ass has its sanctuary in the Little Rann of Kutch, another important but different conservation area in Gujarat.",
+              "isCorrect": false
+            },
+            {
+              "text": "The Sloth Bear",
+              "rationale": "The Jessore Sloth Bear Sanctuary is dedicated to protecting this species, but it is not the key species of Gir National Park.",
+              "isCorrect": false
+            },
+            {
+              "text": "The Asiatic Lion",
+              "rationale": "The report repeatedly emphasizes that Gir Forest National Park is the world's only home for the wild Asiatic lion.",
+              "isCorrect": true
+            },
+            {
+              "text": "The Flamingo",
+              "rationale": "Flamingos are notable migratory birds found in Gujarat's wetlands, such as the Nal Sarovar Birds Sanctuary, but they are not the main inhabitants of Gir.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "This large feline is a symbol of the state's successful wildlife conservation efforts."
+        },
+        {
+          "question": "What is 'Patola,' as described in the section on Gujarat's traditional arts and crafts?",
+          "answerOptions": [
+            {
+              "text": "A form of minimalist white line drawing on mud walls created by tribal communities in Dang.",
+              "rationale": "This accurately describes Warli Painting, another craft mentioned in the text, but not Patola.",
+              "isCorrect": false
+            },
+            {
+              "text": "A complex double ikat weave from Patan, where threads are dyed before weaving to create intricate patterns.",
+              "rationale": "This matches the detailed description of Patola weaving, highlighting its complexity, origin, and status as a prized heirloom.",
+              "isCorrect": true
+            },
+            {
+              "text": "A rare art form from Nirona village using castor oil-based colors applied with a metal stylus.",
+              "rationale": "This is the description provided for Rogan Painting, a distinct and rare art form from the Kutch region.",
+              "isCorrect": false
+            },
+            {
+              "text": "A vibrant stick dance performed in groups, sometimes referred to as 'The Sword Dance'.",
+              "rationale": "This describes Dandiya Raas, a popular folk dance, not a textile craft like Patola.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "This textile art is known for being extremely time-consuming to create and results in a fabric that looks identical on both sides."
+        },
+        {
+          "question": "According to the 'Challenges and Future Outlook' section, what is a key reason for the reported 'disillusionment' among the local Gujarati population?",
+          "answerOptions": [
+            {
+              "text": "The state's heavy focus on agriculture has slowed down urban development and infrastructure projects.",
+              "rationale": "The report indicates the opposite, highlighting massive investments in urban infrastructure like the Smart City Mission.",
+              "isCorrect": false
+            },
+            {
+              "text": "A failure to attract large-scale industrial investment, leading to economic stagnation.",
+              "rationale": "This contradicts the analysis, which portrays Gujarat as highly successful in attracting investment and achieving robust economic growth.",
+              "isCorrect": false
+            },
+            {
+              "text": "A perceived disconnect where rapid industrial growth has not generated sufficient employment opportunities for local residents.",
+              "rationale": "This directly reflects the critique of the 'Gujarat Model' mentioned in the analysis, pointing to a gap between corporate growth and local job creation.",
+              "isCorrect": true
+            },
+            {
+              "text": "Excessive environmental regulations that have hindered the growth of key industries like chemicals and petrochemicals.",
+              "rationale": "The document highlights Gujarat's dominance in these sectors, suggesting that while regulations exist, they have not prevented strong industrial growth.",
+              "isCorrect": false
+            }
+          ],
+          "hint": "Think about the potential social side-effects when an economy grows very quickly, particularly concerning the job market."
+        }
+      ]
+    };
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    const quizContainer = document.getElementById('quiz-container');
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    function loadQuestion() {
+        if (currentQuestionIndex < quizData.questions.length) {
+            const q = quizData.questions[currentQuestionIndex];
+            
+            // Shuffle answer options for each question
+            shuffleArray(q.answerOptions);
+
+            quizContainer.innerHTML = `
+                <div class="mb-6">
+                    <p class="text-xl font-semibold text-gray-900 mb-4">Question ${currentQuestionIndex + 1} of ${quizData.questions.length}</p>
+                    <p class="text-lg text-gray-800">${q.question}</p>
+                </div>
+                <div class="space-y-3 mb-6">
+                    ${q.answerOptions.map((option, index) => `
+                        <button class="answer-option w-full text-left p-4 rounded-md border border-gray-300 bg-gray-50 hover:bg-orange-100 transition-colors duration-200 text-gray-800" data-index="${index}">
+                            ${option.text}
+                        </button>
+                    `).join('')}
+                </div>
+                <div class="text-center">
+                    <button id="hint-button" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-200">Show Hint</button>
+                    <p id="hint-text" class="mt-4 text-blue-700 italic hidden"></p>
+                </div>
+                <div id="rationale-area" class="mt-6 p-4 rounded-md bg-gray-100 border border-gray-200 hidden">
+                    <p id="rationale-text" class="text-gray-700"></p>
+                </div>
+            `;
+
+            document.querySelectorAll('.answer-option').forEach(button => {
+                button.addEventListener('click', selectAnswer);
+            });
+            document.getElementById('hint-button').addEventListener('click', showHint);
+
+        } else {
+            showResults();
+        }
+    }
+
+    function selectAnswer(event) {
+        const selectedButton = event.target;
+        const selectedOptionIndex = selectedButton.dataset.index;
+        const currentQuestion = quizData.questions[currentQuestionIndex];
+        const selectedOption = currentQuestion.answerOptions[selectedOptionIndex];
+
+        // Disable all answer options
+        document.querySelectorAll('.answer-option').forEach(button => {
+            button.disabled = true;
+            button.classList.remove('hover:bg-orange-100');
+            button.classList.add('cursor-not-allowed');
+        });
+
+        // Show rationale
+        const rationaleArea = document.getElementById('rationale-area');
+        const rationaleText = document.getElementById('rationale-text');
+        rationaleText.textContent = selectedOption.rationale;
+        rationaleArea.classList.remove('hidden');
+
+        // Provide visual feedback
+        if (selectedOption.isCorrect) {
+            selectedButton.classList.add('bg-green-200', 'border-green-500');
+            score++;
+        } else {
+            selectedButton.classList.add('bg-red-200', 'border-red-500');
+            // Highlight the correct answer if a wrong one was chosen
+            currentQuestion.answerOptions.forEach((option, index) => {
+                if (option.isCorrect) {
+                    document.querySelector(`.answer-option[data-index="${index}"]`).classList.add('bg-green-200', 'border-green-500');
+                }
+            });
+        }
+
+        // Add a 'Next' button
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Next Question';
+        nextButton.classList.add('mt-6', 'px-6', 'py-2', 'bg-orange-600', 'text-white', 'rounded-md', 'hover:bg-orange-700', 'transition-colors', 'duration-200');
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex++;
+            loadQuestion();
+        });
+        quizContainer.appendChild(nextButton);
+        document.getElementById('hint-button').style.display = 'none'; // Hide hint button after answer
+    }
+
+    function showHint() {
+        const hintText = document.getElementById('hint-text');
+        hintText.textContent = quizData.questions[currentQuestionIndex].hint;
+        hintText.classList.remove('hidden');
+    }
+
+    function showResults() {
+        quizContainer.innerHTML = `
+            <h3 class="text-3xl font-bold text-gray-900 mb-6 text-center">Quiz Results</h3>
+            <p class="text-xl text-center text-gray-800 mb-8">You scored ${score} out of ${quizData.questions.length}!</p>
+            <button id="restart-quiz" class="w-full px-6 py-3 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors duration-200">Restart Quiz</button>
+        `;
+        document.getElementById('restart-quiz').addEventListener('click', restartQuiz);
+    }
+
+    function restartQuiz() {
+        currentQuestionIndex = 0;
+        score = 0;
+        loadQuestion();
+    }
+
+    loadQuestion(); // Initial load of the first question
 });
 </script>
 </body>
